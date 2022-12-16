@@ -36,7 +36,7 @@
 		0C861BEF294CD50B0083A4CE /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0C861BEE294CD50B0083A4CE /* FirebaseFirestoreSwift */; };
 		0C861BF1294CD50B0083A4CE /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0C861BF0294CD50B0083A4CE /* FirebaseStorage */; };
 		0C861BF3294CE7E10083A4CE /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C861BF2294CE7E10083A4CE /* AuthViewModel.swift */; };
-		0C861BF5294D02870083A4CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C861BF4294D02870083A4CE /* GoogleService-Info.plist */; };
+		0C861BF7294D03CD0083A4CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C861BF6294D03CC0083A4CE /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,7 +66,7 @@
 		0C861BE2294CC9EC0083A4CE /* CustomInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputField.swift; sourceTree = "<group>"; };
 		0C861BE5294CCB3E0083A4CE /* AuthenticationHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationHeaderView.swift; sourceTree = "<group>"; };
 		0C861BF2294CE7E10083A4CE /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
-		0C861BF4294D02870083A4CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0C861BF6294D03CC0083A4CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +110,7 @@
 				0C861B90294B736B0083A4CE /* TwitterCloneApp.swift */,
 				0C861B92294B736B0083A4CE /* ContentView.swift */,
 				0C861B94294B736B0083A4CE /* Assets.xcassets */,
-				0C861BF4294D02870083A4CE /* GoogleService-Info.plist */,
+				0C861BF6294D03CC0083A4CE /* GoogleService-Info.plist */,
 				0C861B96294B736B0083A4CE /* Preview Content */,
 			);
 			path = TwitterClone;
@@ -441,8 +441,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C861B98294B736B0083A4CE /* Preview Assets.xcassets in Resources */,
-				0C861BF5294D02870083A4CE /* GoogleService-Info.plist in Resources */,
 				0C861B95294B736B0083A4CE /* Assets.xcassets in Resources */,
+				0C861BF7294D03CD0083A4CE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
