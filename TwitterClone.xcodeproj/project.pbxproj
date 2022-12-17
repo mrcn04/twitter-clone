@@ -37,6 +37,9 @@
 		0C861BF1294CD50B0083A4CE /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0C861BF0294CD50B0083A4CE /* FirebaseStorage */; };
 		0C861BF3294CE7E10083A4CE /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C861BF2294CE7E10083A4CE /* AuthViewModel.swift */; };
 		0C861BF7294D03CD0083A4CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C861BF6294D03CC0083A4CE /* GoogleService-Info.plist */; };
+		0C861BF9294D058D0083A4CE /* ProfilePhotoSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C861BF8294D058D0083A4CE /* ProfilePhotoSelectorView.swift */; };
+		0C861BFC294D1BEE0083A4CE /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C861BFB294D1BEE0083A4CE /* ImagePicker.swift */; };
+		0C861BFE294D21850083A4CE /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C861BFD294D21850083A4CE /* ImageUploader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +70,9 @@
 		0C861BE5294CCB3E0083A4CE /* AuthenticationHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationHeaderView.swift; sourceTree = "<group>"; };
 		0C861BF2294CE7E10083A4CE /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		0C861BF6294D03CC0083A4CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0C861BF8294D058D0083A4CE /* ProfilePhotoSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelectorView.swift; sourceTree = "<group>"; };
+		0C861BFB294D1BEE0083A4CE /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		0C861BFD294D21850083A4CE /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,7 @@
 		0C861B8F294B736B0083A4CE /* TwitterClone */ = {
 			isa = PBXGroup;
 			children = (
+				0C861BFA294D1BE40083A4CE /* Utils */,
 				0C861B9E294B738D0083A4CE /* Extensions */,
 				0C861B9F294B73980083A4CE /* Model */,
 				0C861BA0294B73A00083A4CE /* Service */,
@@ -141,6 +148,7 @@
 		0C861BA0294B73A00083A4CE /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				0C861BFD294D21850083A4CE /* ImageUploader.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -361,6 +369,7 @@
 			children = (
 				0C861BDB294CC4800083A4CE /* LoginView.swift */,
 				0C861BDD294CC4990083A4CE /* RegistrationView.swift */,
+				0C861BF8294D058D0083A4CE /* ProfilePhotoSelectorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -371,6 +380,14 @@
 				0C861BE5294CCB3E0083A4CE /* AuthenticationHeaderView.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		0C861BFA294D1BE40083A4CE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0C861BFB294D1BEE0083A4CE /* ImagePicker.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,12 +472,15 @@
 			files = (
 				0C861BB7294B78FE0083A4CE /* MessagesView.swift in Sources */,
 				0C861BBB294B7A640083A4CE /* ProfileView.swift in Sources */,
+				0C861BFC294D1BEE0083A4CE /* ImagePicker.swift in Sources */,
 				0C861B93294B736B0083A4CE /* ContentView.swift in Sources */,
 				0C861BAA294B74970083A4CE /* TweetRowView.swift in Sources */,
+				0C861BFE294D21850083A4CE /* ImageUploader.swift in Sources */,
 				0C861BE3294CC9EC0083A4CE /* CustomInputField.swift in Sources */,
 				0C861BCD294BAF3C0083A4CE /* UsersStatsView.swift in Sources */,
 				0C861BBD294B9BA80083A4CE /* TweetFilterViewModel.swift in Sources */,
 				0C861BE6294CCB3E0083A4CE /* AuthenticationHeaderView.swift in Sources */,
+				0C861BF9294D058D0083A4CE /* ProfilePhotoSelectorView.swift in Sources */,
 				0C861BA7294B74120083A4CE /* FeedView.swift in Sources */,
 				0C861BC7294BADDE0083A4CE /* SideMenuView.swift in Sources */,
 				0C861B91294B736B0083A4CE /* TwitterCloneApp.swift in Sources */,
@@ -611,6 +631,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -642,6 +663,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

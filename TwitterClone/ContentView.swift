@@ -14,10 +14,11 @@ struct ContentView: View {
     var body: some View {
         Group {
             // no user logged in
-            if viewModel.userSession == nil {
+            if viewModel.userSession == nil && !viewModel.didAuthenticateUser {
                 LoginView()
+            } else if viewModel.didAuthenticateUser {
+                ProfilePhotoSelectorView()
             } else {
-                // have a logged in user
                 mainInterfaceView
             }
         }
