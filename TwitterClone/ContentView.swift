@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ContentView: View {
     @State private var showMenu = false
     @EnvironmentObject var viewModel: AuthViewModel
+    @EnvironmentObject var appState: AppState
     
     var body: some View {
         Group {
@@ -38,7 +40,7 @@ extension ContentView {
     var mainInterfaceView: some View {
         ZStack(alignment: .topLeading) {
             MainTabView()
-                .toolbar(showMenu ? .hidden : .visible)
+                .toolbar(showMenu ? .hidden : .visible) 
             
             if showMenu {
                 ZStack {
@@ -57,16 +59,30 @@ extension ContentView {
                 .offset(x: showMenu ? 0 : -300, y: 0)
                 .background(showMenu ? Color.white : Color.clear)
         }
-        .navigationTitle("Home")
+        .navigationTitle(appState.navTitle)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
-                Button {
-                    withAnimation(.easeInOut) {
-                        showMenu.toggle()
+                if let user = viewModel.currentUser {
+                    Button {
+                        withAnimation(.easeInOut) {
+                            showMenu.toggle()
+                        }
+                    } label: {
+                        KFImage(URL(string: user.profileImageUrl))
+                            .resizable()
+                            .scaledToFill()
+                            .clipShape(Circle())
+                            .frame(width: 32, height: 32)
                     }
-                } label: {
-                    Circle().frame(width: 32, height: 32)
+                } else {
+                    Button {
+                        withAnimation(.easeInOut) {
+                            showMenu.toggle()
+                        }
+                    } label: {
+                        Circle().frame(width: 32, height: 32)
+                    }
                 }
             }
         }

@@ -11,6 +11,7 @@ import Firebase
 @main
 struct TwitterCloneApp: App {
     @StateObject var viewModel = AuthViewModel()
+    @StateObject var appState = AppState()
     
     init() {
         FirebaseApp.configure()
@@ -22,6 +23,7 @@ struct TwitterCloneApp: App {
                 ContentView()
             }
             .environmentObject(viewModel)
+            .environmentObject(appState)
         }
     }
 }
