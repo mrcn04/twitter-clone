@@ -20,6 +20,9 @@ struct FeedView: View {
                     }
                 }
             }
+            .refreshable {
+                viewModel.fetchTweets()
+            }
             
             Button {
                 showNewTweetView.toggle()
